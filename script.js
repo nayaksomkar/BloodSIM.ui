@@ -4,7 +4,7 @@
  */
 
 // Path to the JSON data file
-const FILE = 'https://github.com/nayaksomkar/BloodSIM.ui/blob/main/blooddata.json';
+const FILE = 'https://raw.githubusercontent.com/nayaksomkar/BloodSIM.ui/main/blooddata.json';
 
 /**
  * Load blood inventory data from server and update UI
@@ -100,11 +100,6 @@ function removeBlood() {
  */
 function showNotification(message, type) {
     alert(message);
-    const notice = document.getElementById('notice');
-    if (notice) {
-        notice.textContent = 'Note: Changes cannot be persisted as data is loaded from static GitHub repository. For full functionality, visit the main project.';
-        notice.style.display = 'block';
-    }
 }
 
 /**
@@ -112,7 +107,7 @@ function showNotification(message, type) {
  * Filename includes current date
  */
 function downloadCSV() {
-    fetch('/blooddata.json')
+    fetch(FILE)
         .then(response => response.json())
         .then(data => {
             let csv = 'Blood Group,Hospital A,Hospital B,Hospital C\n';
