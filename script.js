@@ -4,14 +4,14 @@
  */
 
 // Path to the JSON data file
-const FILE = 'blooddata.json';
+const FILE = 'https://github.com/nayaksomkar/BloodSIM.ui/blob/main/blooddata.json';
 
 /**
  * Load blood inventory data from server and update UI
  */
 async function loadData() {
     try {
-        const response = await fetch('/blooddata.json');
+        const response = await fetch(FILE);
         const data = await response.json();
         updateTable(data);
     } catch (error) {
@@ -81,6 +81,7 @@ async function modifyData(action) {
  * Add random blood units to all hospitals
  */
 function addBlood() {
+    showNotification('Blood units added successfully!', 'success');
     modifyData('add');
 }
 
@@ -88,7 +89,22 @@ function addBlood() {
  * Remove random blood units from all hospitals
  */
 function removeBlood() {
+    showNotification('Blood units removed successfully!', 'success');
     modifyData('remove');
+}
+
+/**
+ * Show notification message
+ * @param {string} message - Message to display
+ * @param {string} type - 'success' or 'info'
+ */
+function showNotification(message, type) {
+    alert(message);
+    const notice = document.getElementById('notice');
+    if (notice) {
+        notice.textContent = 'Note: Changes cannot be persisted as data is loaded from static GitHub repository. For full functionality, visit the main project.';
+        notice.style.display = 'block';
+    }
 }
 
 /**
