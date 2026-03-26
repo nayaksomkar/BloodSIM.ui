@@ -1,0 +1,67 @@
+<!-- BloodSIM Dashboard - Main HTML File -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodSIM Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🩸 BloodSIM Dashboard</h1>
+        
+        <!-- Action Buttons: Add, Remove, Download -->
+        <div class="btn-group">
+            <button class="btn btn-add" onclick="addBlood()">+ Add Blood</button>
+            <button class="btn btn-remove" onclick="removeBlood()">- Remove Blood</button>
+            <button class="btn btn-download" onclick="downloadCSV()">⬇ Download CSV</button>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="total">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="hospital-a">0</div>
+                <div class="stat-label">Hospital A</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="hospital-b">0</div>
+                <div class="stat-label">Hospital B</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="hospital-c">0</div>
+                <div class="stat-label">Hospital C</div>
+            </div>
+        </div>
+
+        <!-- Blood Inventory Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Blood Group</th>
+                    <th>Hospital A</th>
+                    <th>Hospital B</th>
+                    <th>Hospital C</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Populated by JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td id="total-a">0</td>
+                    <td id="total-b">0</td>
+                    <td id="total-c">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

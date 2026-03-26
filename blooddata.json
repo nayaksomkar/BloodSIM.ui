@@ -1,0 +1,42 @@
+{
+    "O+": {
+        "Hospital A": 106,
+        "Hospital B": 93,
+        "Hospital C": 121
+    },
+    "O-": {
+        "Hospital A": 74,
+        "Hospital B": 78,
+        "Hospital C": 72
+    },
+    "A+": {
+        "Hospital A": 92,
+        "Hospital B": 116,
+        "Hospital C": 57
+    },
+    "A-": {
+        "Hospital A": 52,
+        "Hospital B": 71,
+        "Hospital C": 77
+    },
+    "B+": {
+        "Hospital A": 70,
+        "Hospital B": 66,
+        "Hospital C": 54
+    },
+    "B-": {
+        "Hospital A": 64,
+        "Hospital B": 75,
+        "Hospital C": 87
+    },
+    "AB+": {
+        "Hospital A": 56,
+        "Hospital B": 64,
+        "Hospital C": 82
+    },
+    "AB-": {
+        "Hospital A": 72,
+        "Hospital B": 53,
+        "Hospital C": 90
+    }
+}
