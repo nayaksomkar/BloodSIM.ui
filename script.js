@@ -4,7 +4,7 @@
  */
 
 // Path to the JSON data file
-const FILE = 'https://raw.githubusercontent.com/nayaksomkar/BloodSIM.ui/main/blooddata.json';
+const FILE = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://raw.githubusercontent.com/nayaksomkar/BloodSIM.ui/main/blooddata.json');
 
 /**
  * Load blood inventory data from server and update UI
