@@ -1,5 +1,7 @@
 # BloodSIM UI
 
+![BloodSIM Dashboard](BloodSIMui.png)
+
 This is the frontend UI project for the BloodSIM simulation application.
 
 ## About
